@@ -107,3 +107,31 @@ export const idAndChildren = {
   },
   ArrowDot: 0,
 };
+export const styleObjMaker = () => {
+  //obj와 stlye 값을 매칭시켜주는 객체를 만드는 함수.
+  //idAndChildren의 key와 styles 객체의 key가 동일하다면, idAndChildren key의
+  //value를 style의 value로 할당해 객체를 만든다.
+  const styleMap = {};
+  const addStyles = (id, children) => {
+    const styleKey = `${id}Style`;
+    // styles에서 해당 스타일이 존재하면 가져옴
+    if (styles[styleKey]) {
+      styleMap[id] = styles[styleKey];
+      //styleMap의 id에 해당되는 style 객체 값이 StyleMap 객체에 할당
+    }
+
+    if (typeof children === "object") {
+      for (const [childId, grandChildren] of Object.entries(children)) {
+        addStyles(childId, grandChildren);
+        // 재귀 호출로 자식 요소의 스타일도 추가
+      }
+    }
+  };
+
+  for (const [id, children] of Object.entries(idAndChildren)) {
+    //idAndChildren의 key와 value를 배열로 변환해, addStyles의 매개변수로 작용
+    addStyles(id, children);
+  }
+
+  return styleMap;
+};
