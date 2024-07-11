@@ -24,8 +24,19 @@ const AllMaker = () => {
   document.body.appendChild(fragment);
   return null;
 };
+const styleAttach = () => {
+  const styleMap = styleObjMaker();
+  for (const id in styleMap) {
+    const element = document.getElementById(id);
+    if (element) {
+      Object.assign(element.style, styleMap[id]);
+    }
+  }
+};
 const App = () => {
-  return <AllMaker />;
+  AllMaker();
+  styleAttach();
+  return null;
 };
 
 export default App;
