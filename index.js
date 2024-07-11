@@ -1,21 +1,4 @@
 const example = document.getElementById("example");
-
-/* <div id="root"></div>
-<div id="Card-Container1">
-  <div id="Card-text"></div>
-  <div id="Card-title"></div>
-  <div id="Card-line"></div>
-</div>
-<div id="Card-Container2">
-  <div id="Card-text"></div>
-  <div id="Card-title"></div>
-  <div id="Card-line"></div>
-</div>
-<div id="vertical">
-  <div id="Vertical-dot"></div>
-  <div id="Vertical-line"></div>
-</div>
-<div id="Aroow-dot"></div> */
 const styles = {
   baseStyle: {
     width: "100vw",
@@ -158,5 +141,34 @@ const divMaker = (id, children) => {
   }
 
   return div;
+};
+const styleObjMaker = () => {
+  //obj와 stlye 값을 매칭시켜주는 객체를 만드는 함수.
+  //idAndChildren의 key와 styles 객체의 key가 동일하다면, idAndChildren key의
+  //value를 style의 value로 할당해 객체를 만든다.
+  const styleMap = {};
+  const addStyles = (id, children) => {
+    const styleKey = `${id}Style`;
+    // styles에서 해당 스타일이 존재하면 가져옴
+    if (styles[styleKey]) {
+      styleMap[id] = styles[styleKey];
+    }
+
+    if (typeof children === "object") {
+      for (const [childId, grandChildren] of Object.entries(children)) {
+        addStyles(childId, grandChildren);
+        // 재귀 호출로 자식 요소의 스타일도 추가
+      }
+    }
+  };
+
+  for (const [id, children] of Object.entries(idAndChildren)) {
+    addStyles(id, children);
+  }
+
+  return styleMap;
+};
+const styleAttach = () => {
+  //styleObjMaker의 값인 객체를 기반으로, style을 할당한다.
 };
 AllMaker();
