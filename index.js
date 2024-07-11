@@ -16,7 +16,14 @@ const example = document.getElementById("example");
   <div id="Vertical-line"></div>
 </div>
 <div id="Aroow-dot"></div> */
-
+const indexStyle = {
+  width: "100vw",
+  height: "100vh",
+  absolute: "absolute",
+  relative: "relative",
+  textAlign: "justify",
+  boxSizing: "border-box",
+};
 const idAndChildren = {
   root: 0,
   CardContainerOne: {
