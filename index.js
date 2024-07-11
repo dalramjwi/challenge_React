@@ -152,6 +152,7 @@ const styleObjMaker = () => {
     // styles에서 해당 스타일이 존재하면 가져옴
     if (styles[styleKey]) {
       styleMap[id] = styles[styleKey];
+      //styleMap의 id에 해당되는 style 객체 값이 StyleMap 객체에 할당
     }
 
     if (typeof children === "object") {
@@ -163,6 +164,7 @@ const styleObjMaker = () => {
   };
 
   for (const [id, children] of Object.entries(idAndChildren)) {
+    //idAndChildren의 key와 value를 배열로 변환해, addStyles의 매개변수로 작용
     addStyles(id, children);
   }
 
