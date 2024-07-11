@@ -89,3 +89,21 @@ export const styles: { [key: string]: React.CSSProperties } = {
     borderRadius: "5px",
   },
 };
+export const idAndChildren: { [key: string]: number | object } = {
+  root: 0,
+  CardContainerOne: {
+    CardTextOne: 0,
+    CardTitleOne: 0,
+    CardLineOne: 0,
+  },
+  CardContaineTwo: {
+    CardTextTwo: 0,
+    CardTitleTwo: 0,
+    CardLineTwo: 0,
+  },
+  vertical: {
+    VerticalDot: 0,
+    VerticalLine: 0,
+  },
+  ArrowDot: 0,
+};
