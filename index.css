@@ -1,225 +1,137 @@
-/* Example */
+body {
+  width: 100vw;
+  height: 100vh;
+}
 
-position: relative;
-width: 1920px;
-height: 1080px;
+#root {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./dist/img/root-image.png");
+  mix-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#Card-Container1 {
+  box-sizing: border-box;
 
-background: #ffffff;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
 
-/* root */
+  background: linear-gradient(
+    90deg,
+    rgba(180, 165, 122, 0.3) 0%,
+    rgba(214, 195, 149, 0.3) 100%
+  );
+  box-shadow: 1px 4px 15.6px -5px #574c31;
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 31px;
+}
+#Card-text {
+  position: absolute;
+  left: 19.83%;
+  right: 2.97%;
+  top: 38.6%;
+  bottom: 4.52%;
 
-position: absolute;
-width: 1920px;
-height: 1080px;
-left: 0px;
-top: 0px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: justify;
 
-background: #d6c395;
+  color: #23201a;
+}
+#Card-title {
+  position: absolute;
+  left: 13.79%;
+  right: 45.4%;
+  top: 21.15%;
+  bottom: 63.04%;
 
-/* root-image */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 77px;
+  text-align: justify;
 
-position: absolute;
-width: 1956px;
-height: 1307px;
-left: -7px;
-top: -134px;
+  color: #23201a;
+}
 
-background: url(.jpg);
-mix-blend-mode: multiply;
+#Card-line {
+  position: absolute;
+  left: 54.98%;
+  right: 2.97%;
+  top: 24.23%;
+  bottom: 75.36%;
 
-/* Card */
+  background: linear-gradient(
+    90deg,
+    rgba(210, 143, 67, 0.5) 0%,
+    rgba(80, 47, 10, 0.5) 100%
+  );
+}
 
-position: absolute;
-width: 1044px;
-height: 487px;
-left: 178px;
-top: 340px;
+#Card-Container2 {
+  box-sizing: border-box;
 
-/* Card-Container */
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
 
-box-sizing: border-box;
+  background: linear-gradient(
+    90deg,
+    rgba(180, 165, 122, 0.3) 0%,
+    rgba(214, 195, 149, 0.3) 100%
+  );
+  box-shadow: 1px 4px 15.6px -5px #574c31;
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 31px;
+}
+#Aroow-dot {
+  position: absolute;
+  left: 65.57%;
+  right: 33.23%;
+  top: 78.7%;
+  bottom: 17.59%;
 
-position: absolute;
-left: 0%;
-right: 0%;
-top: 0%;
-bottom: 0%;
+  background: #ffb14f;
+  transform: rotate(-90deg);
+}
+#vertical {
+  position: absolute;
+  width: 10px;
+  height: 532px;
+  left: 1699px;
+  top: 311px;
+}
+#Vertical-line {
+  position: absolute;
+  left: 88.85%;
+  right: -11.72%;
+  top: 28.8%;
+  bottom: 71.02%;
 
-background: linear-gradient(
-  90deg,
-  rgba(180, 165, 122, 0.3) 0%,
-  rgba(214, 195, 149, 0.3) 100%
-);
-box-shadow: 1px 4px 15.6px -5px #574c31;
-backdrop-filter: blur(29px);
-/* Note: backdrop-filter has minimal browser support */
-border-radius: 31px;
+  background: linear-gradient(
+    90deg,
+    rgba(210, 143, 67, 0.5) 0%,
+    rgba(80, 47, 10, 0.5) 100%
+  );
+  transform: rotate(90deg);
+}
+#Vertical-dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  left: 1699px;
+  top: 833px;
 
-/* Card-text */
-
-position: absolute;
-left: 19.83%;
-right: 2.97%;
-top: 38.6%;
-bottom: 4.52%;
-
-font-family: "Inter";
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 15px;
-text-align: justify;
-
-color: #23201a;
-
-/* Card-title */
-
-position: absolute;
-left: 13.79%;
-right: 45.4%;
-top: 21.15%;
-bottom: 63.04%;
-
-font-family: "Inter";
-font-style: normal;
-font-weight: 400;
-font-size: 64px;
-line-height: 77px;
-text-align: justify;
-
-color: #23201a;
-
-/* Card-line */
-
-position: absolute;
-left: 54.98%;
-right: 2.97%;
-top: 24.23%;
-bottom: 75.36%;
-
-background: linear-gradient(
-  90deg,
-  rgba(210, 143, 67, 0.5) 0%,
-  rgba(80, 47, 10, 0.5) 100%
-);
-
-/* Card */
-
-position: absolute;
-width: 1044px;
-height: 487px;
-left: 178px;
-top: 866px;
-
-/* Card-Container */
-
-box-sizing: border-box;
-
-position: absolute;
-left: 0%;
-right: 0%;
-top: 0%;
-bottom: 0%;
-
-background: linear-gradient(
-  90deg,
-  rgba(180, 165, 122, 0.3) 0%,
-  rgba(214, 195, 149, 0.3) 100%
-);
-box-shadow: 1px 4px 15.6px -5px #574c31;
-backdrop-filter: blur(29px);
-/* Note: backdrop-filter has minimal browser support */
-border-radius: 31px;
-
-/* Card-text */
-
-position: absolute;
-left: 19.83%;
-right: 2.97%;
-top: 38.6%;
-bottom: 4.52%;
-
-font-family: "Inter";
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 15px;
-text-align: justify;
-
-color: #23201a;
-
-/* Card-title */
-
-position: absolute;
-left: 13.79%;
-right: 52.87%;
-top: 21.15%;
-bottom: 63.04%;
-
-font-family: "Inter";
-font-style: normal;
-font-weight: 400;
-font-size: 64px;
-line-height: 77px;
-text-align: justify;
-
-color: #23201a;
-
-/* Card-line */
-
-position: absolute;
-left: 54.98%;
-right: 2.97%;
-top: 24.23%;
-bottom: 75.36%;
-
-background: linear-gradient(
-  90deg,
-  rgba(210, 143, 67, 0.5) 0%,
-  rgba(80, 47, 10, 0.5) 100%
-);
-
-/* Arrow-dot */
-
-position: absolute;
-left: 65.57%;
-right: 33.23%;
-top: 78.7%;
-bottom: 17.59%;
-
-background: #ffb14f;
-transform: rotate(-90deg);
-
-/* Vertical */
-
-position: absolute;
-width: 10px;
-height: 532px;
-left: 1699px;
-top: 311px;
-
-/* Vertical-line */
-
-position: absolute;
-left: 88.85%;
-right: -11.72%;
-top: 28.8%;
-bottom: 71.02%;
-
-background: linear-gradient(
-  90deg,
-  rgba(210, 143, 67, 0.5) 0%,
-  rgba(80, 47, 10, 0.5) 100%
-);
-transform: rotate(90deg);
-
-/* Vertical-dot */
-
-position: absolute;
-width: 10px;
-height: 10px;
-left: 1699px;
-top: 833px;
-
-background: #977240;
-border-radius: 5px;
+  background: #977240;
+  border-radius: 5px;
+}
