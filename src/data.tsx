@@ -1,4 +1,4 @@
-export const styles = {
+export const styles: Record<string, React.CSSProperties> = {
   baseStyle: {
     width: "100vw",
     height: "100vh",
@@ -108,13 +108,12 @@ export const idAndChildren = {
   ArrowDot: 0,
 };
 export const styleObjMaker = () => {
-  //obj와 stlye 값을 매칭시켜주는 객체를 만드는 함수.
-  //idAndChildren의 key와 styles 객체의 key가 동일하다면, idAndChildren key의
-  //value를 style의 value로 할당해 객체를 만든다.
-  const styleMap = {};
-  const addStyles = (id, children) => {
+  const styleMap: Record<string, React.CSSProperties> = {};
+  const addStyles = (
+    id: string,
+    children: React.CSSProperties | object | number
+  ) => {
     const styleKey = `${id}Style`;
-    // styles에서 해당 스타일이 존재하면 가져옴
     if (styles[styleKey]) {
       styleMap[id] = styles[styleKey];
       //styleMap의 id에 해당되는 style 객체 값이 StyleMap 객체에 할당
