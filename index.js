@@ -20,4 +20,11 @@ const example = document.getElementById("example");
 const idAndChildren = {
   root: "root",
 };
+class MakeIdChildren {
+  constructor(id, children) {
+    this.id = id;
+    this.children = children;
+  }
+  makingIdChildren(id, children) {}
+}
 const divMaker = (id, children = "") => {};
