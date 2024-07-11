@@ -172,5 +172,15 @@ const styleObjMaker = () => {
 };
 const styleAttach = () => {
   //styleObjMaker의 값인 객체를 기반으로, style을 할당한다.
+  const styleMap = styleObjMaker();
+  //할당된 객체 값 가져옴
+  for (const id in styleMap) {
+    //for..in 문으로 styleMap의 key 값 가져옴
+    const element = document.getElementById(id);
+    if (element) {
+      Object.assign(element.style, styleMap[id]);
+    }
+  }
 };
 AllMaker();
+styleAttach();
