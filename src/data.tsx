@@ -1,4 +1,4 @@
-export const styles: { [key: string]: React.CSSProperties } = {
+export const styles = {
   baseStyle: {
     width: "100vw",
     height: "100vh",
@@ -89,7 +89,7 @@ export const styles: { [key: string]: React.CSSProperties } = {
     borderRadius: "5px",
   },
 };
-export const idAndChildren: { [key: string]: number | object } = {
+export const idAndChildren = {
   root: 0,
   CardContainerOne: {
     CardTextOne: 0,
